@@ -91,7 +91,7 @@
 //             exit={{ scale: 0.9, opacity: 0, y: 20 }}
 //             className="relative w-full max-w-md bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-2xl border border-slate-100 dark:border-white/10 text-center"
 //           >
-//             <button 
+//             <button
 //               onClick={onClose}
 //               className="absolute top-4 right-4 p-2 text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-full transition-colors"
 //             >
@@ -428,11 +428,11 @@
 //     initial={{ y: -100 }}
 //     animate={{ y: 0 }}
 //     className="
-// fixed top-0 left-0 right-0 z-50 flex items-center justify-between 
+// fixed top-0 left-0 right-0 z-50 flex items-center justify-between
 // px-6 py-4
-// bg-white/70 dark:bg-slate-950/80 backdrop-blur-md 
+// bg-white/70 dark:bg-slate-950/80 backdrop-blur-md
 // border-b border-slate-200/50 dark:border-white/5
-// transition-colors duration-500 
+// transition-colors duration-500
 // "
 //   >
 //     <div className="flex items-center gap-2">
@@ -760,8 +760,8 @@
 //       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
 
 //       <div className="max-w-7xl mx-auto px-6 relative z-10">
-//         {/* HERO SECTION 
-//             Changes: 
+//         {/* HERO SECTION
+//             Changes:
 //             - min-h set to handle content overflow on mobile
 //             - Padding adjusted for mobile readability
 //         */}
@@ -1298,8 +1298,9 @@ import {
   Loader2,
   Medal,
   Maximize2,
+  Smartphone,
+  Palette,
 } from "lucide-react";
-
 
 //--- 1. Custom Toast Component ---
 const Toast = ({ message, isVisible, onClose }) => {
@@ -1391,12 +1392,7 @@ const SuccessModal = ({ isOpen, onClose }) => {
             <div className="relative mb-6 flex justify-center items-center">
               {/* Particles/Confetti */}
               {[...Array(8)].map((_, i) => (
-                <Particle
-                  key={i}
-                  angle={i * 45}
-                  delay={0.2}
-                  distance={60}
-                />
+                <Particle key={i} angle={i * 45} delay={0.2} distance={60} />
               ))}
 
               {/* Main Icon Circle */}
@@ -1481,7 +1477,7 @@ const ImageModal = ({ isOpen, image, title, onClose }) => {
               <X size={24} />
             </button>
             <div className="relative rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-slate-900">
-               <img
+              <img
                 src={image}
                 alt={title}
                 className="w-auto max-h-[80vh] object-contain"
@@ -1499,6 +1495,25 @@ const ImageModal = ({ isOpen, image, title, onClose }) => {
 
 const projectData = [
   {
+    title: "Kiratt - All-in-One E-commerce",
+    subtitle: "Flutter Mobile App | Internship Project",
+    description:
+      "A unified e-commerce ecosystem designed to integrate multiple service sectors into a single mobile interface, focusing on seamless user experience and scalable architecture.",
+    tags: ["Flutter", "Dart"],
+    highlights: [
+      "Multi-vendor service integration in a single app",
+      "Real-time order tracking and dynamic product cataloging",
+      "Optimized UI/UX for high-conversion shopping flows",
+    ],
+    icon: <Smartphone size={16} />, // Make sure Smartphone is imported!
+    image:
+      "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1600&auto=format&fit=crop",
+    links: {
+      live: null, // Internship projects usually don't have public links immediately
+      repo: null,
+    },
+  },
+  {
     title: "Health Buddy",
     subtitle: "SIH 2025 Grand Finalist",
     description:
@@ -1510,8 +1525,7 @@ const projectData = [
       "AI-driven ethical monitoring",
     ],
     icon: <Heart size={16} />,
-    image:
-      "./soulspace.png",
+    image: "./soulspace.png",
     links: {
       live: "https://www.youtube.com/watch?v=V39ldwAi-Fg", // Put your video link here
       repo: null, // setting to null hides the button
@@ -1520,7 +1534,7 @@ const projectData = [
   },
   {
     title: "Modern LMS",
-    subtitle: "Deployed on Azure",
+    subtitle: "Deployed on Azure | Internship Project",
     description:
       "Full-stack Learning Management System with multi-role architecture (Super Admin, Instructor, User).",
     tags: ["Azure", "Nginx", "React", "Node.js", "MongoDB"],
@@ -1530,8 +1544,7 @@ const projectData = [
       "Course Builder Module inclusing Videos , Quizes , Assignments",
     ],
     icon: <BookOpen size={16} />,
-    image:
-      "./lms.png",
+    image: "./lms.png",
     links: {
       live: null, // Hides "Live Demo"
       repo: null, // Hides "View Code"
@@ -1549,8 +1562,7 @@ const projectData = [
       "Google Maps API Integration",
     ],
     icon: <Heart size={16} />,
-    image:
-      "./womensafety.png",
+    image: "./womensafety.png",
     links: {
       live: "https://women-safety-2b3z.vercel.app/",
       repo: "https://github.com/Khushibansal777/Women-Safety",
@@ -1568,8 +1580,7 @@ const projectData = [
       "Supports B2C , B2B Bulk Enquiries",
     ],
     icon: <ShoppingCart size={16} />,
-    image:
-      "./electromart.png",
+    image: "./electromart.png",
     links: {
       live: "https://electromart-phdr-1bvij9ekw-khushi-bansals-projects-35607dc9.vercel.app/",
       repo: "https://github.com/Khushibansal777/Electromart",
@@ -1587,8 +1598,7 @@ const projectData = [
       "Interactive Dashboards",
     ],
     icon: <Users size={16} />,
-    image:
-      "./ems.png",
+    image: "./ems.png",
     links: {
       live: "https://employee-management-system-frontend-iota.vercel.app/",
       repo: "https://github.com/Khushibansal777/Employee-Management-system-frontend",
@@ -1602,18 +1612,16 @@ const certifications = [
     issuer: "Opsight AI Pvt Ltd",
     date: "July 2025– November 2025",
     credentialId: "MERN Stack Specialization",
-    image:
-      "./testimonial.png",
+    image: "./testimonial.png",
     color: "from-purple-500 to-violet-600",
   },
-  
+
   {
     title: "Python for Data Science",
     issuer: "NPTEL (IIT Madras)",
     date: "Jul - Aug 2024",
     credentialId: "Elite + Silver Medal",
-    image:
-      "./ds.png", 
+    image: "./ds.png",
     color: "from-yellow-400 to-amber-600",
   },
   {
@@ -1621,34 +1629,38 @@ const certifications = [
     issuer: "Ministry of Education",
     date: "November 2025– December 2025",
     credentialId: "National Grand Finalist",
-    image:
-      "./sih.jpg",
+    image: "./sih.jpg",
     color: "from-blue-500 to-indigo-600",
   },
-  
+
   {
     title: "Project Competition Winner",
     issuer: "Technical Festival",
     date: "May 2025",
     credentialId: "3rd Position (RANI Project)",
-    image:
-      "./techexpo.jpg",
+    image: "./techexpo.jpg",
     color: "from-emerald-400 to-green-600",
   },
-  
-  
+
   {
     title: "Basic Data Structures & Algos using Python",
     issuer: "NPTEL (IIT Madras)",
     date: "Jul - Sep 2024",
     credentialId: "Elite Certified",
-    image:
-      "./dsa.png",
+    image: "./dsa.png",
     color: "from-rose-500 to-pink-600",
   },
 ];
 
 const experiences = [
+  {
+    role: "Software Intern",
+    company: "Voletic Technologies Pvt. Ltd.",
+    location: "Dwarka, New Delhi",
+    period: "February 2026 — Present",
+    description:
+      "Developing 'Kiratt', a unified e-commerce platform using Flutter. Responsible for architecting a multi-service mobile interface, integrating complex REST APIs",
+  },
   {
     role: "Software Intern",
     company: "Opsight AI Pvt. Ltd.",
@@ -1698,10 +1710,11 @@ const education = [
 
 const techArsenal = {
   "Core & Frontend": [
+    { name: "Flutter Development", icon: Smartphone, status: "Learning" }, // Updated: Code -> Smartphone
     { name: "React.js", icon: Code },
     { name: "Next.js", icon: Globe, status: "Learning" },
-    { name: "Tailwind CSS", icon: Layout },
-    { name: "HTML/CSS", icon: Code },
+    { name: "Tailwind CSS", icon: Palette }, // Suggestion: Layout -> Palette
+    { name: "HTML/CSS", icon: Layout }, // Suggestion: Code -> Layout
     { name: "JavaScript", icon: Terminal },
   ],
   "Backend & Cloud": [
@@ -1870,9 +1883,24 @@ const Navbar = ({ darkMode, setDarkMode }) => (
 
     <div className="flex items-center gap-6">
       <div className="hidden md:flex gap-8 text-xs font-bold text-slate-600 dark:text-slate-300">
-        <a href="#projects" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Work</a>
-        <a href="#experience" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Experience</a>
-        <a href="#contact" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
+        <a
+          href="#projects"
+          className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+        >
+          Work
+        </a>
+        <a
+          href="#experience"
+          className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+        >
+          Experience
+        </a>
+        <a
+          href="#contact"
+          className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+        >
+          Contact
+        </a>
       </div>
       <button
         onClick={() => setDarkMode(!darkMode)}
@@ -2133,7 +2161,7 @@ const CertificationsCarousel = ({ onSelectImage }) => {
             transition={{ delay: index * 0.1 }}
             className="min-w-[260px] md:min-w-[300px] snap-center"
           >
-            <div 
+            <div
               onClick={() => onSelectImage(cert)}
               className="h-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/5 rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300 group cursor-pointer"
             >
@@ -2144,11 +2172,11 @@ const CertificationsCarousel = ({ onSelectImage }) => {
                   alt={cert.title}
                   className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
-                
+
                 <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/40 transition-colors duration-300 flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-white/10 backdrop-blur-md border border-white/20 p-2.5 rounded-full text-white">
-                        <Maximize2 size={20} />
-                    </div>
+                  <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-white/10 backdrop-blur-md border border-white/20 p-2.5 rounded-full text-white">
+                    <Maximize2 size={20} />
+                  </div>
                 </div>
 
                 <div
@@ -2157,7 +2185,7 @@ const CertificationsCarousel = ({ onSelectImage }) => {
                   <Medal size={16} />
                 </div>
               </div>
-              
+
               <div className="p-4">
                 <div className="mb-2">
                   <span className="text-[9px] font-bold uppercase tracking-widest text-slate-400">
@@ -2284,7 +2312,6 @@ export default function App() {
 
       {/* Main Container: Using max-w-6xl for that "80% zoom" feeling (tighter than 7xl) */}
       <div className="max-w-6xl mx-auto px-6 relative z-10">
-        
         {/* HERO SECTION - Tighter Vertical Alignment */}
         <section className="min-h-screen lg:min-h-[600px] flex flex-col justify-center relative pt-20 pb-32">
           <div className="grid lg:grid-cols-2 gap-10 items-center w-full flex-grow">
@@ -2299,7 +2326,7 @@ export default function App() {
                 <div className="relative w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 shrink-0 group mx-auto md:mx-0">
                   <div className="absolute inset-0 bg-blue-500 rounded-full blur opacity-40 group-hover:opacity-60 transition-opacity"></div>
                   <img
-                    src="./pic2.jpeg"
+                    src="./pic.jpeg"
                     alt="Khushi"
                     className="relative w-full h-full rounded-full object-cover border-2 border-white dark:border-white/10"
                   />
@@ -2826,14 +2853,14 @@ export default function App() {
           </p>
         </footer>
       </div>
-      
+
       <SuccessModal isOpen={showModal} onClose={() => setShowModal(false)} />
-      
-      <ImageModal 
-        isOpen={!!selectedCert} 
-        image={selectedCert?.image} 
-        title={selectedCert?.title} 
-        onClose={() => setSelectedCert(null)} 
+
+      <ImageModal
+        isOpen={!!selectedCert}
+        image={selectedCert?.image}
+        title={selectedCert?.title}
+        onClose={() => setSelectedCert(null)}
       />
 
       <Toast
