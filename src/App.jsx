@@ -1328,7 +1328,6 @@ const Toast = ({ message, isVisible, onClose }) => {
 };
 
 // --- 2. Custom Success Modal Component ---
-// --- 2. Custom Success Modal Component ---
 const SuccessModal = ({ isOpen, onClose }) => {
   // Particle component for the "confetti" explosion
   const Particle = ({ angle, delay, distance }) => (
@@ -1609,6 +1608,14 @@ const projectData = [
 const certifications = [
   {
     title: "Software Intern",
+    issuer: "Voletic Technologies Pvt Ltd",
+    date: "Feb 2026– June 2026",
+    credentialId: "Networking Project & Flutter Development",
+    image: "./voletic_experience.png",
+    color: "from-slate-500 to-slate-600",
+  },
+  {
+    title: "Software Intern",
     issuer: "Opsight AI Pvt Ltd",
     date: "July 2025– November 2025",
     credentialId: "MERN Stack Specialization",
@@ -1654,20 +1661,20 @@ const certifications = [
 
 const experiences = [
   {
-    role: "Software Intern",
-    company: "Voletic Technologies Pvt. Ltd.",
-    location: "Dwarka, New Delhi",
-    period: "February 2026 — Present",
+    role: "Software Developer",
+    company: "Kenstel Networks Pvt. Ltd.",
+    location: "NSP, New Delhi",
+    period: "August 2026 - Present",
     description:
-      "Developing 'Kiratt', a unified e-commerce platform using Flutter. Responsible for architecting a multi-service mobile interface, integrating complex REST APIs",
+      "Developing and maintaining router firmware in C , python and implementing networking features.",
   },
   {
-    role: "Software Intern",
-    company: "Opsight AI Pvt. Ltd.",
-    location: "Noida, New Delhi",
-    period: "July 2025 — September 2025",
+    role: "Software Developer Intern",
+    company: "Voletic Technologies Pvt. Ltd.",
+    location: "Dwarka, New Delhi",
+    period: "February 2026 — June 2026",
     description:
-      "Contributed to enterprise AI solutions. Focused on optimizing frontend architecture and refining user interaction layers for production-grade applications.",
+      "Developing a unified e-commerce platform using Flutter and worked on a Networking Project.",
   },
   {
     role: "Team Lead & Finalist",
@@ -1676,6 +1683,14 @@ const experiences = [
     period: "Nov 2025 — Dec 2025",
     description:
       "Led a team of 6 members to the Grand Finale, selected among 1.41 lakh national teams. Architected the 'Health Buddy' platform.",
+  },
+  {
+    role: "Software Developer Intern",
+    company: "Opsight AI Pvt. Ltd.",
+    location: "Noida, New Delhi",
+    period: "July 2025 — September 2025",
+    description:
+      "Contributed to enterprise AI solutions. Focused on optimizing frontend architecture and refining user interaction layers for production-grade applications.",
   },
   {
     role: "Technical Member",
@@ -1692,7 +1707,7 @@ const education = [
     degree: "B.Tech in Computer Science",
     institution: "HMR Institute of Tech & Mgmt",
     period: "2022 — 2026",
-    details: "Rank 1 in College | Rank 18 in GGSIPU | CGPA: 9.52",
+    details: "Rank 1 in College | Rank 18 in GGSIPU | CGPA: 9.58",
   },
   {
     degree: "Senior Secondary (XII)",
@@ -1982,7 +1997,6 @@ const SectionHeading = ({ title, subtitle, badge }) => (
 );
 
 // --- COMPACT PROJECT CARD ---
-// reduced scaling/sizes as requested
 const ProjectCard = ({ project }) => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -2462,7 +2476,7 @@ export default function App() {
                         <div className="inline-flex items-center gap-2 px-2 py-1 rounded-md bg-white/10 border border-white/20 backdrop-blur-md">
                           <Sparkles size={10} className="text-yellow-300" />
                           <span className="text-[10px] font-bold text-white">
-                            CGPA: 9.52
+                            CGPA: 9.58
                           </span>
                         </div>
                       </div>
